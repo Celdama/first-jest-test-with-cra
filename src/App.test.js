@@ -140,4 +140,23 @@ https://www.sitepen.com/blog/snapshot-testing-benefits-and-drawbacks
 https://academind.com/tutorials/testing-react-apps
 
 https://www.youtube.com/watch?v=YQLn7ycfzEo
+
+
+## Dive deeper - Mocking 
+
+- to make your tests more readable and ultimately better, it's a good idea to adopt this pattern sooner or later
+http://wiki.c2.com/?ArrangeActAssert
+
+- secret of act(...) api test, especially pay attention to the last bit about testing async code. 
+- You won't be using it everyday, but it's nice to be familiar.
+https://github.com/mrdulin/react-act-examples/blob/master/sync.md
+
+- article about mocking child component. It extensively covers the "how" of mocking child component.
+https://medium.com/@taylormclean15/jest-testing-mocking-child-components-to-make-your-unit-tests-more-concise-18691ef6a0c2
+
+## knowledge check 
+- [] How can you mock a callback handler?
+- [] How can you mock a child component?
+
+
 */
