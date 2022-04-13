@@ -21,7 +21,17 @@ import App from './App';
 
 describe('App component', () => {
   it('renders correct heading', () => {
-    const { getByRole } = render(<App />);
-    expect(getByRole('heading').textContent).toMatch(/our first test/i);
+    render(<App />);
+    // getByRole is just one of the dozen query methods that wa could've used.
+    // Queries are classified into three types: getBy, queryBy, findBy
+    // https://testing-library.com/docs/queries/about/
+    expect(screen.getByRole('heading').textContent).toMatch(/our first test/i);
+  });
+});
+
+describe('App component para', () => {
+  it('render correct paragraph', () => {
+    render(<App />);
+    expect(screen.getByText('paragraph').className).toMatch('test');
   });
 });
