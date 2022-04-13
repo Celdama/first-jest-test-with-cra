@@ -44,3 +44,5 @@ describe('App component para', () => {
     expect(screen.getByText('paragraph').className).toMatch('test');
   });
 });
+
+// SIMULATE USER EVENT
