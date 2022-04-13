@@ -25,7 +25,16 @@ describe('App component', () => {
     // getByRole is just one of the dozen query methods that wa could've used.
     // Queries are classified into three types: getBy, queryBy, findBy
     // https://testing-library.com/docs/queries/about/
+    // this is my first query
     expect(screen.getByRole('heading').textContent).toMatch(/our first test/i);
+    // and this is my second query, with specificity improved
+    expect(
+      screen.getByRole('heading', { name: 'Our First Test' }).textContent
+    ).toMatch(/our first test/i);
+    // => as stated by the React Testing Library docs, byRole methods are the favored methods for querying, especially
+    // when paired with the name option. (check second test above).
+    // Queries that are done through ByRole ensure that our UI is accessible to everyone
+    // no matter what mode they use to navigate the webpage. (i.e mouse or assistive technologies)
   });
 });
 
